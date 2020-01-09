@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+/*
+----------------- HEADER AND NAVBAR ---------------------
+*/
+header {
+  padding-top: 1rem;
+  margin-top: 3rem;
+}
+#brand h1{
+  font-family: Pacifico, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-bottom: 1rem;
+}
+#brand a{
+  color: #D81616;
+}
+#brand a:hover{
+  text-decoration: none;
+}
+header nav {
+  background-color: white;
+  z-index: 12;
+}
+header .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+}
+header nav .nav-link {
+  color: #D81616 !important;
+  font-size: 12px;
+  padding-right: 1rem !important;
+}
+header nav .navbar-toggler {
+  border: none;
+}
+.my-navbar-toggler {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+#nav-icon4 {
+  width: 20px;
+  height: 20px;
+  margin: 4px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+#nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #D81616;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon4 span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(2) {
+  top: 6px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(3) {
+  top: 12px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 1px;
+  left: 5px;
+}
+
+#nav-icon4.open span:nth-child(2) {
+  opacity: 0;
+}
+
+#nav-icon4.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 15px;
+  left: 5px;
+}
+
+/* 
+----------------- MAIN CONTENT SECTION ------------------
+*/
+#main-section {
+  margin-bottom: 2rem;
+}
+#main-section .row > div {
+  position: relative;
+  padding: 0px;
+}
+#main-section .row > div a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#main-section img {
+  padding: 2px;
+}
+#main-section .row > div a:before {
+  content: "";
+  display: block;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  position: absolute;
+  top: 2px;
+  opacity: 0;
+  left: 2px;
+  background-color: #000;
+  transition: 0.3s ease-out;
+}
+.overlay {
+  transition: 0.3s ease-in-out;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  padding: 5px;
+  width: 100%;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 0.9rem !important;
+  opacity: 0;
+  z-index: 1;
+}
+.overlay span {
+  border: 1px solid white;
+  padding: 1rem;
+}
+#main-section .row > div a:hover .overlay {
+  opacity: 1;
+  transform: translate(-50%, -70%);
+}
+#main-section .row > div a:hover:before {
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.emails a {
+  color: #D81616;
+}
+#video {
+  color: #D81616;
+}
+#video h1, #video p{
+  color: #D81616!important;
+}
+/*
+-------------------IMAGE-GALLERY----------------
+*/
+/* ---- grid ---- */
+
+.grid {
+  background: white;
+}
+
+/* clear fix */
+.grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+  padding: 10px;
+}
+
+hr {
+  background-color: #D81616;
+  height: 2px;
+}
+
+/*
+------------------BIO-SECTION-------------
+*/
+#bio-section {
+  width: 60%;
+  margin: auto;
+}
+#bio-section p {
+  text-align-last: center;
+  color: #D81616;
+  margin-bottom: 4rem;
+  font-size: 0.9rem;
+  padding: 2.5rem;
+}
+
+/*
+-------------------CONTACT-SECTION--------------
+*/
+#contact-section {
+  width: 50%;
+  margin: auto;
+  color: #D81616;
+}
+#contact-section input,
+textarea {
+  margin-top: 1rem;
+  color: #D81616;
+}
+.btn{
+  color: #D81616;
+  border-color: #D81616;
+}
+/*
+--------------FOOTER-----------------
+*/
+footer {
+  height: 150px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+footer a,
+.social-set a {
+  color: #D81616;
+}
+footer .d-flex {
+  width: 100%;
+  height: 100%;
+}
+footer .social-set {
+  flex-grow: 1;
+  align-self: center;
+  padding-left: 75px;
+}
+.social-set span {
+  margin: 1rem;
+}
+.social-set a:hover {
+  color: rgba(168, 49, 123, 0.5);
+}
+
+footer #goto-top {
+  width: 75px;
+  align-self: center;
+  font-size: 2rem;
+}
+#goto-top a {
+  color: #D81616;
+}
+/*
+----------------- MEDIA QUERIES-----------------
+*/
+@media screen and (max-width: 991px) {
+  header {
+    margin-top: 1rem;
+  }
+  .my-navbar-toggler {
+    z-index: 11111;
+    background-color: white;
+  }
+  #navbar {
+    background: none;
+  }
+  nav #my-nav {
+    position: fixed;
+    top: -0px;
+    background-color: white;
+    height: 100vh;
+    transition: 0.3s all;
+    left: 0;
+    width: 100vw;
+    padding-left: 1rem;
+    padding-top: 2rem;
+  }
+  .overlay{
+    font-size: .8rem;
+  }
+  .overlay span {
+    padding: .7rem;
+  }
+  #bio-section,
+  #contact-section {
+    width: 95%;
+  }
+  #contact-section .emails{
+    margin-top: 2rem;
+    text-align: center!important;
+  }
+  /* ---- grid ---- */
+
+  .grid-item img {
+   max-width: 100%;
+  }
+
+  .grid-sizer,
+  .grid-item {
+    width: 50%;
+  }
+
+  footer .d-flex {
+    flex-wrap: wrap-reverse;
+  }
+  footer #goto-top {
+    width: 100%;
+  }
+  footer .social-set {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .grid-sizer,
+  .grid-item {
+    width: 100%;
+  }
+  .grid-item img {
+    width: 100%;
+  }
+}
